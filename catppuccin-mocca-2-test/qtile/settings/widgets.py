@@ -127,6 +127,7 @@ primary_widgets = [
     
     # widget.Volume(**base(bg='color1')),
 
+# must install "pip install pulsectl-asyncio for code below"
     widget.PulseVolume(
         **base(bg='dark5',fg='color5'),
         check_mute_string=['on'],
