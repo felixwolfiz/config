@@ -10,9 +10,11 @@ from .theme import colors
 
 
 layout_conf = {
-    'border_focus': colors['focus'][0],
-    'border_width': 1,
-    'margin': 4,
+    'border_focus': colors['color4'][0],
+    'border_normal':colors['dark'][0],
+    'border_width': 0,
+    'margin': 6,
+    # 'border_normal':colors['color7'][0],
 }
 
 layouts = [

@@ -39,15 +39,16 @@ def powerlineright(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
         text="", # Icon: nf-oct-triangle_left
-        fontsize=130,
+        fontsize=30,
         padding=0
     )
+    
 
 def workspaces(): 
     return [
         separator(),
         widget.GroupBox(
-            **base(fg='light',bg='color2'),
+            **base(fg='light',bg='dark4'),
             font='UbuntuMono Nerd Font',
             fontsize=19,
             margin_y=3,
@@ -55,19 +56,20 @@ def workspaces():
             padding_y=8,
             padding_x=5,
             borderwidth=1,
-            active=colors['active'],
-            inactive=colors['inactive'],
+            active=colors['color5'],
+            inactive=colors['color4'],
             rounded=False,
             highlight_method='block',
             urgent_alert_method='block',
             urgent_border=colors['urgent'],
-            this_current_screen_border=colors['focus'],
+            this_current_screen_border=colors['dark1'],
             this_screen_border=colors['grey'],
             other_current_screen_border=colors['dark'],
             other_screen_border=colors['dark'],
             disable_drag=True
         ),
-         powerlineright('color2', 'dark'),
+         powerlineright('dark4', 'dark'),
+
         separator(),
         widget.WindowName(**base(fg='grey'), fontsize=14, padding=5),
         separator(),
@@ -98,7 +100,7 @@ primary_widgets = [
 
     icon(bg="dark2",fg="color7", text='󰀂 '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='dark2',fg='color7'), interface='enp0s3'),
+    widget.Net(**base(bg='dark2',fg='color7'), interface='enp0s3',format='{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}'),
 
 
     separatorl('dark3', 'dark2'),
@@ -107,7 +109,7 @@ primary_widgets = [
 
     widget.CurrentLayoutIcon(**base(bg='dark3'),custom_icon_paths=["/home/fx/.config/qtile/layout-icons/gruvbox-light2"], scale=0.45),
 
-    widget.CurrentLayout(**base(bg='dark3',fg='color3'), padding=5),
+    widget.CurrentLayout(**base(bg='dark3',fg='color3'), padding=5),    
 
 
     separatorl('color2', 'dark3'),
