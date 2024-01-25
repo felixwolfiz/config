@@ -57,8 +57,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "c", lazy.spawn("subl")),
     ([mod], "m", lazy.spawn(os.path.expanduser("~/.config/rofi/launchers/type-2/launcher.sh"))),
     # Browser
-    ([mod], "b", lazy.spawn("brave-browser")),
-    ([mod], "n", lazy.spawn("thorium-browser")),
+    ([mod], "b", lazy.spawn("floorp")),
+    # ([mod], "n", lazy.spawn("thorium-browser")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("thunar")),
@@ -66,9 +66,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
 
-    # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
-    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
+    # logout
+    ([mod, "shift"], "x", lazy.spawn("qtile cmd-obj -o cmd -f shutdown")),
+
+    # # Redshift
+    # ([mod], "r", lazy.spawn("redshift -O 2400")),
+    # ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
     ([mod], "s", lazy.spawn("scrot")),
