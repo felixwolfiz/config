@@ -100,8 +100,8 @@ primary_widgets = [
 
     icon(bg="dark2",fg="color7", text='󰀂 '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='dark2',fg='color7'), interface='enp0s3',format='{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}'),
-
+    # widget.Net(**base(bg='dark2',fg='color7'), interface='enp0s3',format='{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}'),
+    widget.NetGraph(border_color='434c5e', background='434c5e',graph_color='a6e3a1',fill_color='65b35f'),
 
     separatorl('dark3', 'dark2'),
 
